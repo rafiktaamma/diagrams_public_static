@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1rqs5nc" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="8.7.1">
+  <bpmn:process id="Process_0kvz2b9" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_14uyqgq">
+      <bpmn:outgoing>Flow_00ovm9t</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_1gom2vz" name="Attach resume interview">
+      <bpmn:incoming>Flow_00ovm9t</bpmn:incoming>
+      <bpmn:outgoing>Flow_0lcnuc1</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_00ovm9t" sourceRef="StartEvent_14uyqgq" targetRef="Activity_1gom2vz" />
+    <bpmn:task id="Activity_0yma9io" name="forward resume   associate0program">
+      <bpmn:incoming>Flow_0lcnuc1</bpmn:incoming>
+      <bpmn:outgoing>Flow_10pw98a</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0lcnuc1" sourceRef="Activity_1gom2vz" targetRef="Activity_0yma9io" />
+    <bpmn:task id="Activity_1mdvqsm" name="conduct interview telephone">
+      <bpmn:incoming>Flow_10pw98a</bpmn:incoming>
+      <bpmn:outgoing>Flow_0r3g9gf</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_10pw98a" sourceRef="Activity_0yma9io" targetRef="Activity_1mdvqsm" />
+    <bpmn:task id="Activity_1riych5" name="cordinate date0time interview">
+      <bpmn:incoming>Flow_0r3g9gf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w16ta0</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0r3g9gf" sourceRef="Activity_1mdvqsm" targetRef="Activity_1riych5" />
+    <bpmn:endEvent id="Event_0jxn6lf">
+      <bpmn:incoming>Flow_0w16ta0</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0w16ta0" sourceRef="Activity_1riych5" targetRef="Event_0jxn6lf" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0kvz2b9">
+      <bpmndi:BPMNEdge id="Flow_00ovm9t_di" bpmnElement="Flow_00ovm9t">
+        <di:waypoint x="192" y="120" />
+        <di:waypoint x="250" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lcnuc1_di" bpmnElement="Flow_0lcnuc1">
+        <di:waypoint x="350" y="120" />
+        <di:waypoint x="410" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10pw98a_di" bpmnElement="Flow_10pw98a">
+        <di:waypoint x="510" y="120" />
+        <di:waypoint x="570" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0r3g9gf_di" bpmnElement="Flow_0r3g9gf">
+        <di:waypoint x="670" y="120" />
+        <di:waypoint x="730" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w16ta0_di" bpmnElement="Flow_0w16ta0">
+        <di:waypoint x="830" y="120" />
+        <di:waypoint x="892" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_14uyqgq">
+        <dc:Bounds x="156" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1gom2vz_di" bpmnElement="Activity_1gom2vz">
+        <dc:Bounds x="250" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0yma9io_di" bpmnElement="Activity_0yma9io">
+        <dc:Bounds x="410" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mdvqsm_di" bpmnElement="Activity_1mdvqsm">
+        <dc:Bounds x="570" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1riych5_di" bpmnElement="Activity_1riych5">
+        <dc:Bounds x="730" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0jxn6lf_di" bpmnElement="Event_0jxn6lf">
+        <dc:Bounds x="892" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
